@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.playwright-mcp/
+.claude/
+.env
+.venv
+env/
+venv/
+*.png
+BaPTree.dot
