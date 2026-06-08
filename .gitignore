@@ -10,4 +10,5 @@ env/
 venv/
 *.png
 BaPTree.dot
-CLAUDE.MD
+CLAUDE.md
+
