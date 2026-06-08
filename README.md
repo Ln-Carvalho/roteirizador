@@ -45,21 +45,28 @@ Abra `http://localhost:8501`.
 
 ## Status
 
-🟡 **Especificação concluída — implementação não iniciada.**
+🟢 **Implementacao concluida e validada.**
 
-Esta pasta contém **apenas a documentação de design** do MVP. A implementação será feita numa
-sessão dedicada. Comece lendo **[`CLAUDE.md`](./CLAUDE.md)**, que orienta a ordem de leitura e o
-processo de execução.
+O MVP foi implementado com sucesso incluindo as logicas adicionais de Multiplas Viagens por Veiculo (MTVRP) e trava de seguranca de demandas.
 
 ---
 
-## Mapa da documentação
+## Creditos e Agradecimentos
 
-| Documento | Para quê |
+Este projeto foi desenvolvido por **Luan Carvalho** para a disciplina de **Topicos em Engenharia de Producao da UFF - TEP00132**, ministrada pelo **Professor Eduardo Uchoa**.
+
+Um agradecimento especial a excelente biblioteca **VRPSolverEasy** por fornecer uma interface acessivel e robusta para modelagem matematica de problemas de roteamento. Seu uso foi fundamental para viabilizar as solucoes exatas deste trabalho.
+
+---
+
+## Mapa da documentacao
+
+| Documento | Para que |
 |---|---|
-| [`CLAUDE.md`](./CLAUDE.md) | Orientação para quem vai implementar — leia primeiro |
-| [`docs/DESIGN.md`](./docs/DESIGN.md) | O quê e por quê: visão, escopo, UX do wizard, decisões |
-| [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | Como: módulos, fluxo de dados, contratos, erros, estado |
+| [`CLAUDE.md`](./CLAUDE.md) | Orientacao para quem vai implementar — leia primeiro |
+| [`docs/DESIGN.md`](./docs/DESIGN.md) | O que e por que: visao, escopo, UX do wizard, decisoes |
+| [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | Como: modulos, fluxo de dados, contratos, erros, estado |
 | [`docs/TECH_STACK.md`](./docs/TECH_STACK.md) | Bibliotecas, stack OSM gratuito e seus limites |
-| [`docs/REFERENCE.md`](./docs/REFERENCE.md) | Referência concreta: API do solver, endpoints, código a reaproveitar |
-| [`docs/BUILD_PLAN.md`](./docs/BUILD_PLAN.md) | Plano de implementação em fases + estratégia de verificação |
+| [`docs/REFERENCE.md`](./docs/REFERENCE.md) | Referencia concreta: API do solver, endpoints, codigo a reaproveitar |
+| [`docs/BUILD_PLAN.md`](./docs/BUILD_PLAN.md) | Plano de implementacao em fases + estrategia de verificacao |
+| [`docs/FEEDBACK.md`](./docs/FEEDBACK.md) | Registros de melhorias pos-MVP |

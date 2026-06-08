@@ -37,6 +37,11 @@ _init_state()
 
 
 def _barra_progresso():
+    with st.sidebar:
+        st.markdown("### Roteirizador CVRP")
+        st.caption("Desenvolvido por **Luan Carvalho** para a disciplina de **Tópicos em Engenharia de Produção da UFF - TEP00132** (Prof. Eduardo Uchoa).")
+        st.caption("Agradecimentos à biblioteca **VRPSolverEasy** pela base matemática deste projeto.")
+        
     etapa = st.session_state.etapa
     cols = st.columns(3)
     rotulos = ["1. Enderecos", "2. Frota", "3. Resultado"]
