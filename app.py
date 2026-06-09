@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_folium import st_folium
 
 from core.distance import matriz_distancias
-from core.geocoding import geocodificar_lote
+from core.geocoding import GeocodingRateLimitError, geocodificar_lote
 from core.mapa import desenhar
 from core.models import Cenario, Ponto, TipoVeiculo
 from core.routing_geometry import geometria_rota
@@ -112,8 +112,12 @@ def _etapa_1():
     if st.button("Geocodificar e Avancar", disabled=not pode_avancar, type="primary"):
         st.session_state.pontos = []   # limpa estado anterior antes de tentar
         enderecos = validos["endereco"].tolist()
-        with st.spinner("Geocodificando enderecos (1 s por endereco)..."):
-            coords = geocodificar_lote(enderecos)
+        with st.spinner("Geocodificando enderecos (2 s por endereco)..."):
+            try:
+                coords = geocodificar_lote(enderecos)
+            except GeocodingRateLimitError as exc:
+                st.error(str(exc))
+                return
 
         falhas = [e for e, c in zip(enderecos, coords) if c is None]
         if falhas:
