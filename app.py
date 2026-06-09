@@ -86,7 +86,7 @@ def _etapa_1():
                 "Deposito", help="Marque para usar este ponto como deposito (origem dos veiculos).",
             ),
         },
-        use_container_width=True,
+        width="stretch",
         key="editor_enderecos",
     )
     # A base passada ao editor permanece estavel entre reruns; o estado de edicao
@@ -176,7 +176,7 @@ def _etapa_2():
                 "Deposito de origem", options=opcoes_deposito
             ),
         },
-        use_container_width=True,
+        width="stretch",
         key="editor_frota",
     )
     # Base estavel + key: higieniza uma COPIA, nao reescreve a base no render
